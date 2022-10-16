@@ -1,0 +1,135 @@
+.graphic {
+    box-shadow: 0 0 20px rgba(161, 164, 182, 0.5);
+    border-radius: 20px;
+    padding: 40px 30px;
+    margin-bottom: 60px;
+    position: relative;
+
+    &__top-title {
+        font-weight: 500;
+    }
+
+    &__top-title-question {
+        width: 12px;
+        height: 12px;
+        position: relative;
+        top: -15px;
+        cursor: pointer;
+    }
+
+    &__top {
+        @include flex-between;
+    }
+
+    &__top-buttons {
+        display: flex;
+        gap: 10px;
+    }
+
+    &__top-buttons-button {
+        padding: 12px;
+        font-weight: 500;
+        border: 1px solid #8A9393;
+        border-radius: 16px;
+    }
+
+    &__top-buttons-button--active {
+        background: #1F6763;
+        color: #FFFFFF;
+        border-color: #1F6763;
+    }
+
+
+    &__graphic-button {
+        border-radius: 50%;
+        background: #1F6763;
+        height: 60px;
+        width: 60px;
+        display: block;
+        @include flex-center;
+        position: absolute;
+        right: -10px;
+        bottom: -35px;
+    }
+
+    &__graphic-button-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+}
+
+.graphic__graphic-empty {
+    display: none;
+
+    &-img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    &-text {
+        text-align: center;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 26px;
+    }
+
+    &--active {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .graphic {
+        &__top {
+            flex-direction: column;
+            align-items: start;
+            gap: 30px;
+        }
+
+        &__top-title {
+            font-size: 28px;
+            line-height: 42px;
+        }
+
+        &__top-buttons {
+            margin-bottom: 16px;
+        }
+
+        &__top-title-question {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .graphic {
+        box-shadow: none;
+        border-radius: 0;
+        padding: 50px 0 40px;
+        margin-bottom: 0;
+
+        &__top-title {
+            font-size: 28px;
+            line-height: 42px;
+        }
+
+        &__graphic canvas {
+            height: 200px;
+        }
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .graphic {
+        &__top-title {
+            font-size: 24px;
+            line-height: 42px;
+        }
+
+        &__top-buttons-button {
+            font-size: 12px;
+            padding: 12px;
+        }
+    }
+}

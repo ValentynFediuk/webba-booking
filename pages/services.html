@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+
+<body>
+
+<div class="container">
+    <header class="header">
+        <div class="header__left mobile-hidden">
+            <a class="logo" href="#">
+                <img class="logo__image" src="/logo.png" alt="logo">
+            </a>
+            <h1 class="header__title title">Dashboard</h1>
+        </div>
+        <div class="header__left mobile-visible">
+            <a class="logo" href="#">
+                <img class="logo__image" src="/logo-mobile.png" alt="logo">
+            </a>
+            <h1 class="header__title title">Services</h1>
+        </div>
+        <div class="header__right">
+            <nav class="nav mobile-hidden">
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a href="../index.html" class="menu__link">
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="../pages/services.html" class="menu__link menu__link--active">
+                            Services
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            Appearance
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            Settings
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <a class="header__button header__button--desktop-icon-visible button" href="#">
+                <span>Add service</span>
+                <svg class="header__button-icon">
+                    <use xlink:href="../sprite.svg#plus"></use>
+                </svg>
+            </a>
+
+        </div>
+    </header>
+</div>
+
+<div class="wrapper">
+    <main class="main">
+        <section class="services card-container">
+            <h2 class="services__title title">Services</h2>
+            <div class="services__dropdowns">
+                <div class="services__dropdowns-checkbox">
+                    <input class="custom-checkbox-input" type="checkbox" id="services-filter">
+                    <label class="custom-checkbox-label" for="services-filter"></label>
+                </div>
+                <div class="services__dropdowns-sort">
+                    <span>Sort by:</span>
+                    <label>
+                        <select name="Sort by alphabet">
+                            <option value="test">Category A-Z</option>
+                        </select>
+                    </label>
+                    <span>Sort by:</span>
+                    <label>
+                        <select name="Sort by name">
+                            <option value="test">Name</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+            <div class="services__list">
+                <div class="services__list-header">
+                    <div class="services__list-header-checkbox">
+                        <input class="custom-checkbox-input" type="checkbox" id="service-header-checkbox">
+                        <label class="custom-checkbox-label" for="service-header-checkbox"></label>
+                    </div>
+                    <div class="services__list-header-title">Service name</div>
+                    <div class="services__list-header-title">Category</div>
+                    <div class="services__list-header-title">Duration</div>
+                    <div class="services__list-header-title">Price</div>
+                    <div class="services__list-header-title">Email</div>
+                </div>
+                <div class="services__list-wrapper pagination-content">
+                    <div class="services__list-service">
+                        <div class="services__list-service-wrapper">
+                            <div class="services__list-service-checkbox">
+                                <input class="custom-checkbox-input" type="checkbox" id="service-checkbox">
+                                <label class="custom-checkbox-label" for="service-checkbox"></label>
+                            </div>
+                            <div class="services__list-service-title">Service name</div>
+                            <div class="services__list-service-item services__list-service-item-avatar services__list-service-item-avatar--violet">
+                                <b><span>A</span></b>
+                                <span>Service Name 1</span>
+                            </div>
+                            <div class="services__list-service-title">Category</div>
+                            <div class="services__list-service-item">Category 1</div>
+                            <div class="services__list-service-title">Duration:</div>
+                            <div class="services__list-service-item">1h</div>
+                            <div class="services__list-service-title">Payment:</div>
+                            <div class="services__list-service-item">$25.00</div>
+                            <div class="services__list-service-title">Email</div>
+                            <div class="services__list-service-item">
+                                <a href="mailto:info@gmail.com">info@gmail.com</a>
+                            </div>
+                            <div class="services__list-service-item services__list-service-item-buttons">
+                                <button class="services__list-service-item-buttons-button">
+                                    <svg class="services__list-service-item-buttons-button-icon">
+                                        <use xlink:href="../sprite.svg#booking-list-edit"></use>
+                                    </svg>
+                                </button>
+                                <button class="services__list-service-item-buttons-button">
+                                    <svg class="services__list-service-item-buttons-button-icon">
+                                        <use xlink:href="../sprite.svg#delete-basket"></use>
+                                    </svg>
+                                </button>
+                                <button class="services__list-service-item-buttons-button services__list-service-item-buttons-button--arrow">
+                                    <svg class="services__list-service-item-buttons-button-icon">
+                                        <use xlink:href="../sprite.svg#booking-arrow-down"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="services__list-service-item-tab">
+                            <div class="services__list-service-item-tab-content">
+                                Date: <b>8.08.2022</b>
+                            </div>
+                            <div class="services__list-service-item-tab-content">
+                                Time: <b>9:00 am</b>
+                            </div>
+                            <div class="services__list-service-item-tab-content">
+                                Pricing: <b>Stripe</b>
+                            </div>
+                            <div class="services__list-service-item-tab-content">
+                            <span>
+                                Note: <b>Lorem Ipsum is simply dummy text of
+                                the printing and typesetting industry.</b>
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services__list-service">
+                        <div class="services__list-service-wrapper">
+                            <div class="services__list-service-checkbox">
+                                <input class="custom-checkbox-input" type="checkbox" id="service-checkbox1">
+                                <label class="custom-checkbox-label" for="service-checkbox1"></label>
+                            </div>
+                            <div class="services__list-service-title">Service name</div>
+                            <div class="services__list-service-item services__list-service-item-avatar services__list-service-item-avatar--violet">
+                                <b><span>A</span></b>
+                                <span>Service Name 1</span>
+                            </div>
+                            <div class="services__list-service-title">Category</div>
+                            <div class="services__list-service-item">Category 1</div>
+                            <div class="services__list-service-title">Duration:</div>
+                            <div class="services__list-service-item">1h</div>
+                            <div class="services__list-service-title">Payment:</div>
+                            <div class="services__list-service-item">$25.00</div>
+                            <div class="services__list-service-title">Email</div>
+                            <div class="services__list-service-item">
+                                <a href="mailto:info@gmail.com">info@gmail.com</a>
+                            </div>
+                            <div class="services__list-service-item services__list-service-item-buttons">
+                                <button class="services__list-service-item-buttons-button">
+                                    <svg class="services__list-service-item-buttons-button-icon">
+                                        <use xlink:href="../sprite.svg#booking-list-edit"></use>
+                                    </svg>
+                                </button>
+                                <button class="services__list-service-item-buttons-button">
+                                    <svg class="services__list-service-item-buttons-button-icon">
+                                        <use xlink:href="../sprite.svg#delete-basket"></use>
+                                    </svg>
+                                </button>
+                                <button class="services__list-service-item-buttons-button services__list-service-item-buttons-button--arrow">
+                                    <svg class="services__list-service-item-buttons-button-icon">
+                                        <use xlink:href="../sprite.svg#booking-arrow-down"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="services__list-service-item-tab">
+                            <div class="services__list-service-item-tab-content">
+                                Date: <b>8.08.2022</b>
+                            </div>
+                            <div class="services__list-service-item-tab-content">
+                                Time: <b>9:00 am</b>
+                            </div>
+                            <div class="services__list-service-item-tab-content">
+                                Pricing: <b>Stripe</b>
+                            </div>
+                            <div class="services__list-service-item-tab-content">
+                            <span>
+                                Note: <b>Lorem Ipsum is simply dummy text of
+                                the printing and typesetting industry.</b>
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services__list-service">
+                        <div class="services__list-service-wrapper">
+                            <div class="services__list-service-checkbox">
+                                <input class="custom-checkbox-input" type="checkbox" id="service-checkbox2">
+                                <label class="custom-checkbox-label" for="service-checkbox2"></label>
+                            </div>
+                            <div class="services__list-service-title">Service name</div>
+                            <div class="services__list-service-item services__list-service-item-avatar services__list-service-item-avatar--red">
+                                <b><span>A</span></b>
+                                <span>Service Name 1</span>
+                            </div>
+                            <div class="services__list-service-title">Category</div>
+                            <div class="services__list-service-item">Category 1</div>
+                            <div class="services__list-service-title">Duration:</div>
+                            <div class="services__list-service-item">1h</div>
+                            <div class="services__list-service-title">Payment:</div>
+                            <div class="services__list-service-item">$25.00</div>
+                            <div class="services__list-service-title">Email</div>
+                            <div class="services__list-service-item">
+                                <a href="mailto:info@gmail.com">info@gmail.com</a>
+                            </div>
+                            <div class="services__list-service-item services__list-service-item-buttons">
+                                <button class="services__list-service-item-buttons-button">
+                                    <svg class="services__list-service-item-buttons-button-icon">
+                                        <use xlink:href="../sprite.svg#booking-list-edit"></use>
+                                    </svg>
+                                </button>
+                                <button class="services__list-service-item-buttons-button">
+                                    <svg class="services__list-service-item-buttons-button-icon">
+                                        <use xlink:href="../sprite.svg#delete-basket"></use>
+                                    </svg>
+                                </button>
+                                <button class="services__list-service-item-buttons-button services__list-service-item-buttons-button--arrow">
+                                    <svg class="services__list-service-item-buttons-button-icon">
+                                        <use xlink:href="../sprite.svg#booking-arrow-down"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="services__list-service-item-tab">
+                            <div class="services__list-service-item-tab-content">
+                                Date: <b>8.08.2022</b>
+                            </div>
+                            <div class="services__list-service-item-tab-content">
+                                Time: <b>9:00 am</b>
+                            </div>
+                            <div class="services__list-service-item-tab-content">
+                                Pricing: <b>Stripe</b>
+                            </div>
+                            <div class="services__list-service-item-tab-content">
+                            <span>
+                                Note: <b>Lorem Ipsum is simply dummy text of
+                                the printing and typesetting industry.</b>
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services__list-service">
+                        <div class="services__list-service-wrapper">
+                            <div class="services__list-service-checkbox">
+                                <input class="custom-checkbox-input" type="checkbox" id="service-checkbox3">
+                                <label class="custom-checkbox-label" for="service-checkbox3"></label>
+                            </div>
+                            <div class="services__list-service-title">Service name</div>
+                            <div class="services__list-service-item services__list-service-item-avatar services__list-service-item-avatar--violet">
+                                <b><span>A</span></b>
+                                <span>Service Name 1</span>
+                            </div>
+                            <div class="services__list-service-title">Category</div>
+                            <div class="services__list-service-item">Category 1</div>
+                            <div class="services__list-service-title">Duration:</div>
+                            <div class="services__list-service-item">1h</div>
+                            <div class="services__list-service-title">Payment:</div>
+                            <div class="services__list-service-item">$25.00</div>
+                            <div class="services__list-service-title">Email</div>
+                            <div class="services__list-service-item">
+                                <a href="mailto:info@gmail.com">info@gmail.com</a>
+                            </div>
+                            <div class="services__list-service-item services__list-service-item-buttons">
+                                <button class="services__list-service-item-buttons-button">
+                                    <svg class="services__list-service-item-buttons-button-icon">
+                                        <use xlink:href="../sprite.svg#booking-list-edit"></use>
+                                    </svg>
+                                </button>
+                                <button class="services__list-service-item-buttons-button">
+                                    <svg class="services__list-service-item-buttons-button-icon">
+                                        <use xlink:href="../sprite.svg#delete-basket"></use>
+                                    </svg>
+                                </button>
+                                <button class="services__list-service-item-buttons-button services__list-service-item-buttons-button--arrow">
+                                    <svg class="services__list-service-item-buttons-button-icon">
+                                        <use xlink:href="../sprite.svg#booking-arrow-down"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="services__list-service-item-tab">
+                            <div class="services__list-service-item-tab-content">
+                                Date: <b>8.08.2022</b>
+                            </div>
+                            <div class="services__list-service-item-tab-content">
+                                Time: <b>9:00 am</b>
+                            </div>
+                            <div class="services__list-service-item-tab-content">
+                                Pricing: <b>Stripe</b>
+                            </div>
+                            <div class="services__list-service-item-tab-content">
+                            <span>
+                                Note: <b>Lorem Ipsum is simply dummy text of
+                                the printing and typesetting industry.</b>
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services__list-service">
+                        <div class="services__list-service-wrapper">
+                            <div class="services__list-service-checkbox">
+                                <input class="custom-checkbox-input" type="checkbox" id="service-checkbox4">
+                                <label class="custom-checkbox-label" for="service-checkbox4"></label>
+                            </div>
+                            <div class="services__list-service-title">Service name</div>
+                            <div class="services__list-service-item services__list-service-item-avatar services__list-service-item-avatar--yellow">
+                                <b><span>A</span></b>
+                                <span>Service Name 1</span>
+                            </div>
+                            <div class="services__list-service-title">Category</div>
+                            <div class="services__list-service-item">Category 1</div>
+                            <div class="services__list-service-title">Duration:</div>
+                            <div class="services__list-service-item">1h</div>
+                            <div class="services__list-service-title">Payment:</div>
+                            <div class="services__list-service-item">$25.00</div>
+                            <div class="services__list-service-title">Email</div>
+                            <div class="services__list-service-item">
+                                <a href="mailto:info@gmail.com">info@gmail.com</a>
+                            </div>
+                            <div class="services__list-service-item services__list-service-item-buttons">
+                                <button class="services__list-service-item-buttons-button">
+                                    <svg class="services__list-service-item-buttons-button-icon">
+                                        <use xlink:href="../sprite.svg#booking-list-edit"></use>
+                                    </svg>
+                                </button>
+                                <button class="services__list-service-item-buttons-button">
+                                    <svg class="services__list-service-item-buttons-button-icon">
+                                        <use xlink:href="../sprite.svg#delete-basket"></use>
+                                    </svg>
+                                </button>
+                                <button class="services__list-service-item-buttons-button services__list-service-item-buttons-button--arrow">
+                                    <svg class="services__list-service-item-buttons-button-icon">
+                                        <use xlink:href="../sprite.svg#booking-arrow-down"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="services__list-service-item-tab">
+                            <div class="services__list-service-item-tab-content">
+                                Date: <b>8.08.2022</b>
+                            </div>
+                            <div class="services__list-service-item-tab-content">
+                                Time: <b>9:00 am</b>
+                            </div>
+                            <div class="services__list-service-item-tab-content">
+                                Pricing: <b>Stripe</b>
+                            </div>
+                            <div class="services__list-service-item-tab-content">
+                            <span>
+                                Note: <b>Lorem Ipsum is simply dummy text of
+                                the printing and typesetting industry.</b>
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services__list-service">
+                        <div class="services__list-service-wrapper">
+                            <div class="services__list-service-checkbox">
+                                <input class="custom-checkbox-input" type="checkbox" id="service-checkbox5">
+                                <label class="custom-checkbox-label" for="service-checkbox5"></label>
+                            </div>
+                            <div class="services__list-service-title">Service name</div>
+                            <div class="services__list-service-item services__list-service-item-avatar services__list-service-item-avatar--yellow">
+                                <b><span>A</span></b>
+                                <span>Service Name 1</span>
+                            </div>
+                            <div class="services__list-service-title">Category</div>
+                            <div class="services__list-service-item">Category 1</div>
+                            <div class="services__list-service-title">Duration:</div>
+                            <div class="services__list-service-item">1h</div>
+                            <div class="services__list-service-title">Payment:</div>
+                            <div class="services__list-service-item">$25.00</div>
+                            <div class="services__list-service-title">Email</div>
+                            <div class="services__list-service-item">
+                                <a href="mailto:info@gmail.com">info@gmail.com</a>
+                            </div>
+                            <div class="services__list-service-item services__list-service-item-buttons">
+                                <button class="services__list-service-item-buttons-button">
+                                    <svg class="services__list-service-item-buttons-button-icon">
+                                        <use xlink:href="../sprite.svg#booking-list-edit"></use>
+                                    </svg>
+                                </button>
+                                <button class="services__list-service-item-buttons-button">
+                                    <svg class="services__list-service-item-buttons-button-icon">
+                                        <use xlink:href="../sprite.svg#delete-basket"></use>
+                                    </svg>
+                                </button>
+                                <button class="services__list-service-item-buttons-button services__list-service-item-buttons-button--arrow">
+                                    <svg class="services__list-service-item-buttons-button-icon">
+                                        <use xlink:href="../sprite.svg#booking-arrow-down"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="services__list-service-item-tab">
+                            <div class="services__list-service-item-tab-content">
+                                Date: <b>8.08.2022</b>
+                            </div>
+                            <div class="services__list-service-item-tab-content">
+                                Time: <b>9:00 am</b>
+                            </div>
+                            <div class="services__list-service-item-tab-content">
+                                Pricing: <b>Stripe</b>
+                            </div>
+                            <div class="services__list-service-item-tab-content">
+                            <span>
+                                Note: <b>Lorem Ipsum is simply dummy text of
+                                the printing and typesetting industry.</b>
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services__list-service">
+                        <div class="services__list-service-wrapper">
+                            <div class="services__list-service-checkbox">
+                                <input class="custom-checkbox-input" type="checkbox" id="service-checkbox6">
+                                <label class="custom-checkbox-label" for="service-checkbox6"></label>
+                            </div>
+                            <div class="services__list-service-title">Service name</div>
+                            <div class="services__list-service-item services__list-service-item-avatar services__list-service-item-avatar--yellow">
+                                <b><span>A</span></b>
+                                <span>Service Name 1</span>
+                            </div>
+                            <div class="services__list-service-title">Category</div>
+                            <div class="services__list-service-item">Category 1</div>
+                            <div class="services__list-service-title">Duration:</div>
+                            <div class="services__list-service-item">1h</div>
+                            <div class="services__list-service-title">Payment:</div>
+                            <div class="services__list-service-item">$25.00</div>
+                            <div class="services__list-service-title">Email</div>
+                            <div class="services__list-service-item">
+                                <a href="mailto:info@gmail.com">info@gmail.com</a>
+                            </div>
+                            <div class="services__list-service-item services__list-service-item-buttons">
+                                <button class="services__list-service-item-buttons-button">
+                                    <svg class="services__list-service-item-buttons-button-icon">
+                                        <use xlink:href="../sprite.svg#booking-list-edit"></use>
+                                    </svg>
+                                </button>
+                                <button class="services__list-service-item-buttons-button">
+                                    <svg class="services__list-service-item-buttons-button-icon">
+                                        <use xlink:href="../sprite.svg#delete-basket"></use>
+                                    </svg>
+                                </button>
+                                <button class="services__list-service-item-buttons-button services__list-service-item-buttons-button--arrow">
+                                    <svg class="services__list-service-item-buttons-button-icon">
+                                        <use xlink:href="../sprite.svg#booking-arrow-down"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="services__list-service-item-tab">
+                            <div class="services__list-service-item-tab-content">
+                                Date: <b>8.08.2022</b>
+                            </div>
+                            <div class="services__list-service-item-tab-content">
+                                Time: <b>9:00 am</b>
+                            </div>
+                            <div class="services__list-service-item-tab-content">
+                                Pricing: <b>Stripe</b>
+                            </div>
+                            <div class="services__list-service-item-tab-content">
+                            <span>
+                                Note: <b>Lorem Ipsum is simply dummy text of
+                                the printing and typesetting industry.</b>
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="pagination-buttons">
+            <button class="pagination-buttons__previous">
+                <svg class="pagination-buttons-icon pagination-buttons__previous-icon">
+                    <use xlink:href="../sprite.svg#pagination-arrow"></use>
+                </svg>
+            </button>
+            <button class="pagination-buttons-icon pagination-buttons__next">
+                <svg class="pagination-buttons-icon pagination-buttons__next-icon">
+                    <use xlink:href="../sprite.svg#pagination-arrow"></use>
+                </svg>
+            </button>
+        </div>
+    </main>
+</div>
+
+<script type="module" src="../main.js"></script>
+<script type="module">
+    import '../js/services.js'
+    import '../js/pagination.js'
+</script>
+
+
+</body>
+
+</html>

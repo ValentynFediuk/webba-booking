@@ -1,0 +1,144 @@
+.header {
+    padding: 50px 0 30px;
+    border-bottom: 1px solid #C2C7C7;
+    @include flex-between;
+
+    &__left {
+        display: flex;
+    }
+
+    &__right {
+        @include flex-between;
+    }
+}
+
+.logo {
+    margin-right: 12px;
+}
+
+.header__title {
+    font-size: 32px;
+    line-height: 48px;
+    position: relative;
+    padding-left: 12px;
+    font-weight: 400;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 1px;
+        background: #C2C4D6;
+        top: 8px;
+        left: 0;
+        height: 30px;
+    }
+}
+
+.menu {
+    @include flex-between;
+    gap: 60px;
+    margin-left: 20px;
+
+    &__link {
+        font-weight: 500;
+        line-height: 26px;
+    }
+
+    &__link--active {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            background: #1F6763;
+            width: 4px;
+            height: 4px;
+            border-radius: 100px;
+        }
+    }
+}
+
+.header__button {
+    padding: 13px 30px;
+    max-width: 180px;
+    width: 100%;
+    background: #1F6763;
+    border-radius: 16px;
+    color: #FFFFFF;
+    margin-left: 120px;
+
+    &-icon {
+        display: none;
+        margin-bottom: 3px;
+    }
+}
+
+.header__button--desktop-icon-visible {
+    @include flex-center;
+    & span {
+        margin-right: 10px;
+    }
+    & .header__button-icon {
+        display: block;
+        width: 16px;
+        height: 16px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .header__title {
+        font-size: 20px;
+    }
+
+    .menu {
+        gap: 25px;
+    }
+
+    .header__button {
+        margin-left: 20px;
+        font-size: 0;
+        line-height: 0;
+        padding: 0;
+        width: 50px;
+        height: 50px;
+        position: relative;
+    }
+
+    .header__button-icon {
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        inset: 35%;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 16px 0 16px;
+    }
+
+    .header__left.mobile-visible {
+        @include flex-center;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .header {
+        &__title {
+            font-size: 17px;
+        }
+
+        &__button {
+            height: 40px;
+            width: 40px;
+        }
+
+        &__button-icon {
+            width: 12px;
+            height: 12px;
+        }
+    }
+}

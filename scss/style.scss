@@ -1,0 +1,31 @@
+@import 'global';
+@import 'mixins';
+@import 'reset';
+@import 'fonts';
+
+@import 'components/header';
+@import 'components/bookings';
+@import 'components/graphic';
+@import "components/checkbox";
+@import "components/button-approved";
+@import "components/card-container";
+@import "components/services";
+@import "components/pagination";
+
+@import 'pages/dashboard';
+@import 'pages/pricing';
+
+.mobile-visible {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+    .mobile-visible {
+        display: block;
+    }
+
+    .mobile-hidden {
+        display: none;
+    }
+}

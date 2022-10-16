@@ -1,0 +1,379 @@
+@import "scss/mixins";
+
+.info-warning {
+    background: #CBE7E7;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+
+    &__icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    &__text {
+        margin-left: 16px;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 33px;
+    }
+
+    &__text-link {
+        text-decoration: underline;
+        font-weight: 700;
+    }
+}
+
+.plans {
+    padding: 30px 0;
+
+    &__title {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 48px;
+        margin-bottom: 16px;
+    }
+
+    &__subtitle {
+        margin-bottom: 30px;
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 16px;
+    }
+
+    &__buttons-button {
+        border: 1px solid #8A9393;
+        border-radius: 16px;
+        font-weight: 500;
+        padding: 12px;
+    }
+
+    &__buttons-button--active {
+        color: #FFFFFF;
+        background: #1F6763;
+        border: 1px solid #1F6763;
+    }
+}
+
+.plans-list {
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    grid-gap: 30px;
+    padding: 30px 0 150px;
+}
+
+.plan {
+    box-shadow: 0 0 20px rgba(161, 164, 182, 0.2);
+    border-radius: 20px;
+    height: 568px;
+    position: relative;
+
+    &-inner {
+        padding: 30px 20px;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 16px;
+        display: inline-block;
+    }
+
+    &__filter {
+        position: absolute;
+        right: 20px;
+        top: 30px;
+        background: #00B5EE;
+        color: #ffffff;
+        border-radius: 30px;
+        padding: 4px 10px;
+    }
+
+    &__points {
+        margin-bottom: 16px;
+    }
+
+    &__points-point {
+        padding-right: 12px;
+        padding-left: 8px;
+        position: relative;
+    }
+
+    &__points-point:first-child {
+        border-right: 1px solid #C2C7C7;
+        padding-left: 0;
+    }
+
+    &__points-point-icon {
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: 2px;
+        right: -7px;
+    }
+
+    &__price {
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 72px;
+        margin-bottom: 16px;
+    }
+
+    &__price span {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        color: #8A9393;
+    }
+
+    &__features {
+        margin-bottom: 30px;
+    }
+
+    &__features-feature {
+        position: relative;
+        margin-left: 28px;
+        margin-bottom: 12px;
+    }
+
+    &__features-feature-icon {
+        width: 20px;
+        height: 24px;
+        position: absolute;
+        left: -28px;
+    }
+
+    &__options-option {
+        padding: 8px 0;
+        display: flex;
+        align-items: center;
+    }
+
+    &__options-option-checkbox {
+        padding: 0;
+        height: initial;
+        width: initial;
+        margin-bottom: 0;
+        display: none;
+        cursor: pointer;
+        font-weight: 500;
+    }
+
+    &__options-option-label {
+        position: relative;
+        cursor: pointer;
+    }
+
+    &__options-option-label::before {
+        content: '';
+        -webkit-appearance: none;
+        border: 2px solid #212121;
+        border-radius: 50px;
+        padding: 7px;
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+        cursor: pointer;
+        margin-right: 5px;
+        top: -1px;
+    }
+
+    &__options-option-checkbox:checked + .plan__options-option-label:after {
+        content: '';
+        -webkit-appearance: none;
+        border: 4px solid #212121;
+        border-radius: 50px;
+        padding: 5px;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 2px;
+        cursor: pointer;
+        margin-right: 5px;
+    }
+
+    &__options-option-discount {
+        background: #CBE7E7;
+        border-radius: 100px;
+        padding: 3px 14px;
+        display: block;
+        position: absolute;
+        right: 124px;
+    }
+
+    &__options-option-price {
+        margin-left: auto;
+    }
+
+    &__button {
+        max-width: 360px;
+        margin: 0 auto;
+        width: 100%;
+        height: 50px;
+        padding: 13px 36px;
+        background: #1F6763;
+        border-radius: 16px;
+        color: #FFFFFF;
+        display: block;
+        text-align: center;
+        position: absolute;
+        bottom: 30px;
+        text-transform: uppercase;
+    }
+}
+
+.plan--active {
+    & .plan__button {
+        background: rgba(33, 33, 33, 0.2);
+    }
+}
+
+.faq {
+    &__title {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 48px;
+        margin-bottom: 16px;
+    }
+
+    &__tabs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+    }
+
+    &__tab-left, &__tab-right {
+        max-width: 775px;
+        width: 100%;
+    }
+
+    &__tab-right {
+        margin-left: 20px;
+    }
+
+    &__tab {
+        border-top: 1px solid #D9DFE7;
+        border-bottom: 1px solid #D9DFE7;
+        padding: 16px 0;
+        position: relative;
+        cursor: pointer;
+
+    }
+
+    &__tab-title {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 26px;
+        display: inline-block;
+        margin-bottom: 0;
+        margin-right: 40px;
+    }
+
+    &__tab-icon {
+        width: 36px;
+        height: 36px;
+        position: absolute;
+        top: 10px;
+        right: 0;
+        stroke: #212121;
+    }
+
+    &__tab-text {
+        font-size: 0;
+        line-height: 0;
+    }
+}
+
+.faq__tab--active {
+    & .faq__tab-title {
+        margin-bottom: 10px;
+    }
+    & .faq__tab-text {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    & .faq__tab-icon {
+        transform: rotate(180deg);
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .plans-list {
+        grid-template-columns: 400px;
+        justify-content: center;
+    }
+
+    .faq__tabs {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .info-warning {
+        &__icon {
+            min-width: 24px;
+        }
+
+        &__title {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    .plans {
+        &-list {
+            grid-template-columns: 343px;
+            justify-content: center;
+            padding: 24px 0 0;
+        }
+        &__title {
+            font-size: 28px;
+            line-height: 42px;
+        }
+        &__buttons {
+            flex-direction: column;
+        }
+    }
+
+    .plan {
+        height: auto;
+        &__title {
+            font-size: 20px;
+            line-height: 30px;
+            margin-bottom: 20px;
+        }
+        &__button {
+            position: static;
+        }
+        &__options {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 385px) {
+    .plans {
+        &-list {
+            grid-template-columns: 290px;
+        }
+    }
+
+    .plan {
+        &__title {
+            font-size: 17px;
+        }
+        &__filter {
+            font-size: 12px;
+        }
+        &__options-option-discount {
+            display: none;
+        }
+    }
+}

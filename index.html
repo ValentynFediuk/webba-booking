@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+
+<body>
+
+<div class="container">
+    <header class="header">
+        <div class="header__left mobile-hidden">
+            <a class="logo" href="#">
+                <img class="logo__image" src="/logo.png" alt="logo">
+            </a>
+            <h1 class="header__title title">Dashboard</h1>
+        </div>
+        <div class="header__left mobile-visible">
+            <a class="logo" href="#">
+                <img class="logo__image" src="/logo-mobile.png" alt="logo">
+            </a>
+            <h1 class="header__title title">Dashboard</h1>
+        </div>
+        <div class="header__right">
+            <nav class="nav mobile-hidden">
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a href="index.html" class="menu__link menu__link--active">
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="pages/services.html" class="menu__link">
+                            Services
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            Appearance
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            Settings
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <a class="header__button button" href="#">
+                Add service
+                <svg class="header__button-icon">
+                    <use xlink:href="sprite.svg#plus"></use>
+                </svg>
+            </a>
+
+        </div>
+    </header>
+    <section class="hero">
+        <div class="hero-top">
+            <div class="hero-top__info">
+                <h2 class="hero-top__title title">👋 Hello <span>Jenifer</span></h2>
+                <p class="hero-top__subtitle">
+                    You have <b>12</b> approved bookings and <b>8</b> pending bookings for selected date
+                </p>
+            </div>
+            <div class="hero-top__data-pickers">
+                <label class="hero-top__data-picker hero-top__data-picker--custom-range" for="data-range">
+                    <button class="hero-top__data-picker-button hero-top__data-picker-button--left"
+                            id="data-range-arrow-left">
+                        <svg class="hero-top__data-picker-arrow hero-top__data-picker-arrow--left">
+                            <use xlink:href="sprite.svg#data-picker-arrow"></use>
+                        </svg>
+                    </button>
+                    <input class="hero-top__data-picker-input" id="data-range" type="text" value="" name="data-range"/>
+                    <button class="hero-top__data-picker-button hero-top__data-picker-button--right"
+                            id="data-range-arrow-right">
+                        <svg class="hero-top__data-picker-arrow hero-top__data-picker-arrow--left">
+                            <use xlink:href="sprite.svg#data-picker-arrow"></use>
+                        </svg>
+                    </button>
+                </label>
+                <label class="hero-top__date-select-label" for="date-select">
+                    <select class="hero-top__date-select" name="date-select" id="date-select">
+                        <option value='1'>Today</option>
+                        <option value='2'>Yesterday</option>
+                        <option value='3'>Last 7 Days</option>
+                        <option value='4'>Last 30 Days</option>
+                        <option value='5'>This Month</option>
+                        <option value='6'>Last Month</option>
+                        <option value='7'>Custom Range</option>
+                    </select>
+                    <svg class="hero-top__date-select-arrow">
+                        <use xlink:href="sprite.svg#data-picker-arrow"></use>
+                    </svg>
+                </label>
+            </div>
+        </div>
+        <div class="booking-status">
+            <div class="booking-status__booking">
+                <b>
+                    <abbr title="dollar">$</abbr><span>1000.00</span>
+                </b>
+                <svg class="booking-status__icon">
+                    <use xlink:href="sprite.svg#booking-graphic"></use>
+                </svg>
+                <p class="booking-status__description">
+                    <span class="booking-status__description-approved booking-status__description--price">
+                        <span>350</span><abbr title="dollar">$</abbr>
+                        approved
+                    </span>
+                    <span class="booking-status__description-pending booking-status__description--price">
+                        <span>650</span><abbr title="dollar">$</abbr>
+                         pending
+                    </span>
+                </p>
+            </div>
+            <div class="booking-status__booking">
+                <b>12</b>
+                <svg class="booking-status__icon">
+                    <use xlink:href="sprite.svg#booking-rise"></use>
+                </svg>
+                <p class="booking-status__description">
+                    <span>
+                        Approved Bookings
+                        <svg class="booking-status__description__icon">
+                            <use xlink:href="sprite.svg#question"></use>
+                        </svg>
+                    </span>
+
+                </p>
+            </div>
+            <div class="booking-status__booking">
+                <b>8</b>
+                <svg class="booking-status__icon">
+                    <use xlink:href="sprite.svg#booking-edit"></use>
+                </svg>
+                <p class="booking-status__description">
+                    <span>
+                        Pending Bookings
+                        <svg class="booking-status__description__icon">
+                            <use xlink:href="sprite.svg#question"></use>
+                        </svg>
+                    </span>
+
+                </p>
+            </div>
+            <div class="booking-status__booking">
+                <b>
+                    <span>80</span><abbr title="percentage">%</abbr>
+                </b>
+                <svg class="booking-status__icon">
+                    <use xlink:href="sprite.svg#booking-blocked"></use>
+                </svg>
+                <p class="booking-status__description">
+                    <span>
+                        Of slots are booked
+                        <svg class="booking-status__description__icon">
+                            <use xlink:href="sprite.svg#question"></use>
+                        </svg>
+                    </span>
+
+                </p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div class="wrapper wrapper--dashboard">
+    <main class="main">
+        <div class="container">
+            <section class="bookings">
+                <div class="bookings-top">
+                    <h2 class="bookings-top__title title mobile-hidden">Bookings</h2>
+                    <div class="bookings-filters mobile-visible">
+                        <h2 class="bookings-top__title title">Bookings</h2>
+                        <div class="bookings-top__icons">
+                            <input class="custom-checkbox-input" type="checkbox" id="mobile-bookings-filter">
+                            <label class="custom-checkbox-label" for="mobile-bookings-filter">
+                                <svg class="bookings-filters__arrow-down">
+                                    <use xlink:href="sprite.svg#checkbox-arrow-down"></use>
+                                </svg>
+                            </label>
+                            <svg class="bookings-filters__basket">
+                                <use xlink:href="sprite.svg#delete-basket"></use>
+                            </svg>
+                        </div>
+                        <ul class="bookings-filters__dropdown bookings-filters__dropdown--active">
+                            <li class="bookings-filters__dropdown-item">All</li>
+                            <li class="bookings-filters__dropdown-item">Approved</li>
+                            <li class="bookings-filters__dropdown-item">Pending</li>
+                            <li class="bookings-filters__dropdown-item">Rejected</li>
+                        </ul>
+                    </div>
+                    <div class="bookings-top__buttons">
+                        <a href="#" class="bookings-top__buttons-button bookings-top__buttons-button--underline">
+                            Show past bookings
+                        </a>
+                        <a href="#" class="bookings-top__buttons-button bookings-top__buttons-button--plus">
+                            New booking
+                            <svg class="bookings-top__buttons-button-icon">
+                                <use xlink:href="sprite.svg#plus"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="bookings-filters mobile-hidden">
+                    <input class="custom-checkbox-input" type="checkbox" id="bookings-filter">
+                    <label class="custom-checkbox-label" for="bookings-filter">
+                        <svg class="bookings-filters__arrow-down">
+                            <use xlink:href="sprite.svg#checkbox-arrow-down"></use>
+                        </svg>
+                    </label>
+                    <svg class="bookings-filters__basket">
+                        <use xlink:href="sprite.svg#delete-basket"></use>
+                    </svg>
+                    <ul class="bookings-filters__dropdown">
+                        <li class="bookings-filters__dropdown-item">All</li>
+                        <li class="bookings-filters__dropdown-item">Approved</li>
+                        <li class="bookings-filters__dropdown-item">Pending</li>
+                        <li class="bookings-filters__dropdown-item">Rejected</li>
+                    </ul>
+                </div>
+                <div class="bookings-list-wrapper">
+                    <table class="bookings-list">
+                        <thead>
+                        <tr>
+                            <th>Date/Time:</th>
+                            <th>Customers</th>
+                            <th>Assigned to:</th>
+                            <th>Duration:</th>
+                            <th>Payment:</th>
+                            <th>Status:</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="bookings-list__client bookings-list__client--disabled">
+                            <td>
+                                <input class="custom-checkbox-input" type="checkbox" id="book-date1">
+                                <label class="custom-checkbox-label" for="book-date1"></label>August 1,
+                                2022 9:30 am
+                            </td>
+                            <td>Amina Amina</td>
+                            <td class="bookings-list__client-avatar">
+                                <div class="bookings-list__client-avatar-circle bookings-list__client-avatar-circle--violet">
+                                    A
+                                </div>
+                                <span>Amina Amina</span>
+                            </td>
+                            <td>1h</td>
+                            <td>$25.00</td>
+                            <td class="bookings-list__client-status">
+                                <div class="bookings-list__client-status-inner">
+                                    <button class="bookings-list__client-status-button bookings-list__client-status-button--approved">
+                                        <svg class="bookings-list__client-status-button-icon--approved bookings-list__client-status-button-icon--approved--check-mark-icon">
+                                            <use xlink:href="sprite.svg#check-mark-approved"></use>
+                                        </svg>
+                                        Approved
+                                        <svg class="bookings-list__client-status-button-icon--approved bookings-list__client-status-button-icon--approved--arrow-icon">
+                                            <use xlink:href="sprite.svg#arrow-down-approved"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="client-status__buttons">
+                                        <button class="client-status__buttons-button">
+                                            <svg class="client-status__buttons-button-icon">
+                                                <use xlink:href="sprite.svg#booking-list-edit"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="client-status__buttons-button">
+                                            <svg class="client-status__buttons-button-icon">
+                                                <use xlink:href="sprite.svg#booking-copy"></use>
+                                            </svg>
+                                        </button>
+                                        <button data-tab="1"
+                                                class="client-status__buttons-button client-status__buttons-button--arrow">
+                                            <svg class="client-status__buttons-button-icon">
+                                                <use xlink:href="sprite.svg#booking-arrow-down"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-tab="1" class="bookings-list__client-tab bookings-list__client-tab--disabled">
+                            <td>Date: <b>8.08.2022</b></td>
+                            <td>Time: <b>9:00 am</b></td>
+                            <td>Pricing: <b>Stripe</b></td>
+                            <td colspan="3" class="bookings-list__client-tab-note">
+                                <span>
+                                    Note: <b>Lorem Ipsum is simply dummy text of the
+                                    printing and typesetting industry. Lorem
+                                    Ipsum has been the industry's standard dummy.</b>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class="bookings-list__client bookings-list__client--disabled">
+                            <td>
+                                <input class="custom-checkbox-input" type="checkbox" id="book-date2">
+                                <label class="custom-checkbox-label" for="book-date2"></label>August 1,
+                                2022 9:30 am
+                            </td>
+                            <td>Amina Amina</td>
+                            <td class="bookings-list__client-avatar">
+                                <div class="bookings-list__client-avatar-circle bookings-list__client-avatar-circle--yellow">
+                                    A
+                                </div>
+                                <span>Amina Amina</span>
+                            </td>
+                            <td>1h</td>
+                            <td>$25.00</td>
+                            <td class="bookings-list__client-status">
+                                <div class="bookings-list__client-status-inner">
+                                    <button class="bookings-list__client-status-button bookings-list__client-status-button--approved">
+                                        <svg class="bookings-list__client-status-button-icon--approved bookings-list__client-status-button-icon--approved--check-mark-icon">
+                                            <use xlink:href="sprite.svg#check-mark-approved"></use>
+                                        </svg>
+                                        Approved
+                                        <svg class="bookings-list__client-status-button-icon--approved bookings-list__client-status-button-icon--approved--arrow-icon">
+                                            <use xlink:href="sprite.svg#arrow-down-approved"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="client-status__buttons">
+                                        <button class="client-status__buttons-button">
+                                            <svg class="client-status__buttons-button-icon">
+                                                <use xlink:href="sprite.svg#booking-list-edit"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="client-status__buttons-button">
+                                            <svg class="client-status__buttons-button-icon">
+                                                <use xlink:href="sprite.svg#booking-copy"></use>
+                                            </svg>
+                                        </button>
+                                        <button data-tab="2"
+                                                class="client-status__buttons-button client-status__buttons-button--arrow">
+                                            <svg class="client-status__buttons-button-icon">
+                                                <use xlink:href="sprite.svg#booking-arrow-down"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-tab="2" class="bookings-list__client-tab bookings-list__client-tab--disabled">
+                            <td>Date: <b>8.08.2022</b></td>
+                            <td>Time: <b>9:00 am</b></td>
+                            <td>Pricing: <b>Stripe</b></td>
+                            <td colspan="3" class="bookings-list__client-tab-note">
+                                <span>
+                                    Note: <b>Lorem Ipsum is simply dummy text of the
+                                    printing and typesetting industry. Lorem
+                                    Ipsum has been the industry's standard dummy.</b>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class="bookings-list__client bookings-list__client--active bookings-list__client--disabled">
+                            <td>
+                                <input class="custom-checkbox-input" type="checkbox" id="book-date3">
+                                <label class="custom-checkbox-label" for="book-date3"></label>August 1,
+                                2022 9:30 am
+                            </td>
+                            <td>Amina Amina</td>
+                            <td class="bookings-list__client-avatar">
+                                <div class="bookings-list__client-avatar-circle bookings-list__client-avatar-circle--green">
+                                    A
+                                </div>
+                                <span>Amina Amina</span>
+                            </td>
+                            <td>1h</td>
+                            <td>$25.00</td>
+                            <td class="bookings-list__client-status">
+                                <div class="bookings-list__client-status-inner">
+                                    <button class="bookings-list__client-status-button bookings-list__client-status-button--approved">
+                                        <svg class="bookings-list__client-status-button-icon--approved bookings-list__client-status-button-icon--approved--check-mark-icon">
+                                            <use xlink:href="sprite.svg#check-mark-approved"></use>
+                                        </svg>
+                                        Approved
+                                        <svg class="bookings-list__client-status-button-icon--approved bookings-list__client-status-button-icon--approved--arrow-icon">
+                                            <use xlink:href="sprite.svg#arrow-down-approved"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="client-status__buttons">
+                                        <button class="client-status__buttons-button">
+                                            <svg class="client-status__buttons-button-icon">
+                                                <use xlink:href="sprite.svg#booking-list-edit"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="client-status__buttons-button">
+                                            <svg class="client-status__buttons-button-icon">
+                                                <use xlink:href="sprite.svg#booking-copy"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="client-status__buttons-button client-status__buttons-button--arrow"
+                                                data-tab="3">
+                                            <svg class="client-status__buttons-button-icon">
+                                                <use xlink:href="sprite.svg#booking-arrow-down"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-tab="3"
+                            class="bookings-list__client-tab bookings-list__client-tab--disabled bookings-list__client-tab--active">
+                            <td>Date: <b>8.08.2022</b></td>
+                            <td>Time: <b>9:00 am</b></td>
+                            <td>Pricing: <b>Stripe</b></td>
+                            <td colspan="3" class="bookings-list__client-tab-note">
+                                <span>
+                                    Note: <b>Lorem Ipsum is simply dummy text of the
+                                    printing and typesetting industry. Lorem
+                                    Ipsum has been the industry's standard dummy.</b>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class="bookings-list__client">
+                            <td>
+                                <input class="custom-checkbox-input" type="checkbox" id="book-date4">
+                                <label class="custom-checkbox-label" for="book-date4"></label>August 1,
+                                2022 9:30 am
+                            </td>
+                            <td>Amina Amina</td>
+                            <td class="bookings-list__client-avatar">
+                                <div class="bookings-list__client-avatar-circle bookings-list__client-avatar-circle--violet">
+                                    A
+                                </div>
+                                <span>Amina Amina</span>
+                            </td>
+                            <td>1h</td>
+                            <td>$25.00</td>
+                            <td class="bookings-list__client-status">
+                                <div class="bookings-list__client-status-inner">
+                                    <button class="bookings-list__client-status-button bookings-list__client-status-button--canceled">
+                                        <svg class="bookings-list__client-status-button-icon--canceled bookings-list__client-status-button-icon--canceled--cross-icon">
+                                            <use xlink:href="sprite.svg#cross-canceled"></use>
+                                        </svg>
+                                        Canceled
+                                        <svg class="bookings-list__client-status-button-icon--canceled bookings-list__client-status-button-icon--canceled--arrow-icon">
+                                            <use xlink:href="sprite.svg#arrow-down-canceled"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="client-status__buttons">
+                                        <button class="client-status__buttons-button">
+                                            <svg class="client-status__buttons-button-icon">
+                                                <use xlink:href="sprite.svg#booking-list-edit"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="client-status__buttons-button">
+                                            <svg class="client-status__buttons-button-icon">
+                                                <use xlink:href="sprite.svg#booking-copy"></use>
+                                            </svg>
+                                        </button>
+                                        <button data-tab="4"
+                                                class="client-status__buttons-button client-status__buttons-button--arrow">
+                                            <svg class="client-status__buttons-button-icon">
+                                                <use xlink:href="sprite.svg#booking-arrow-down"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-tab="4" class="bookings-list__client-tab bookings-list__client-tab--disabled">
+                            <td>Date: <b>8.08.2022</b></td>
+                            <td>Time: <b>9:00 am</b></td>
+                            <td>Pricing: <b>Stripe</b></td>
+                            <td colspan="3" class="bookings-list__client-tab-note">
+                                <span>
+                                    Note: <b>Lorem Ipsum is simply dummy text of the
+                                    printing and typesetting industry. Lorem
+                                    Ipsum has been the industry's standard dummy.</b>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class="bookings-list__client">
+                            <td>
+                                <input class="custom-checkbox-input" type="checkbox" id="book-date5">
+                                <label class="custom-checkbox-label" for="book-date5"></label>August 1,
+                                2022 9:30 am
+                            </td>
+                            <td>Amina Amina</td>
+                            <td class="bookings-list__client-avatar">
+                                <div class="bookings-list__client-avatar-circle bookings-list__client-avatar-circle--green">
+                                    A
+                                </div>
+                                <span>Amina Amina</span>
+                            </td>
+                            <td>1h</td>
+                            <td>$25.00</td>
+                            <td class="bookings-list__client-status">
+                                <div class="bookings-list__client-status-inner">
+                                    <button class="bookings-list__client-status-button bookings-list__client-status-button--approved">
+                                        <svg class="bookings-list__client-status-button-icon--approved bookings-list__client-status-button-icon--approved--check-mark-icon">
+                                            <use xlink:href="sprite.svg#check-mark-approved"></use>
+                                        </svg>
+                                        Approved
+                                        <svg class="bookings-list__client-status-button-icon--approved bookings-list__client-status-button-icon--approved--arrow-icon">
+                                            <use xlink:href="sprite.svg#arrow-down-approved"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="client-status__buttons">
+                                        <button class="client-status__buttons-button">
+                                            <svg class="client-status__buttons-button-icon">
+                                                <use xlink:href="sprite.svg#booking-list-edit"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="client-status__buttons-button">
+                                            <svg class="client-status__buttons-button-icon">
+                                                <use xlink:href="sprite.svg#booking-copy"></use>
+                                            </svg>
+                                        </button>
+                                        <button data-tab="5"
+                                                class="client-status__buttons-button client-status__buttons-button--arrow">
+                                            <svg class="client-status__buttons-button-icon">
+                                                <use xlink:href="sprite.svg#booking-arrow-down"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </td>
+                        </tr>
+                        <tr data-tab="5" class="bookings-list__client-tab bookings-list__client-tab--disabled">
+                            <td>Date: <b>8.08.2022</b></td>
+                            <td>Time: <b>9:00 am</b></td>
+                            <td>Pricing: <b>Stripe</b></td>
+                            <td colspan="3" class="bookings-list__client-tab-note">
+                                <span>
+                                    Note: <b>Lorem Ipsum is simply dummy text of the
+                                    printing and typesetting industry. Lorem
+                                    Ipsum has been the industry's standard dummy.</b>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class="bookings-list__client">
+                            <td>
+                                <input class="custom-checkbox-input" type="checkbox" id="book-date6">
+                                <label class="custom-checkbox-label" for="book-date6"></label>August 1,
+                                2022 9:30 am
+                            </td>
+                            <td>Amina Amina</td>
+                            <td class="bookings-list__client-avatar">
+                                <div class="bookings-list__client-avatar-circle bookings-list__client-avatar-circle--green">
+                                    A
+                                </div>
+                                <span>Amina Amina</span>
+                            </td>
+                            <td>1h</td>
+                            <td>$25.00</td>
+                            <td class="bookings-list__client-status">
+                                <div class="bookings-list__client-status-inner">
+                                    <button class="bookings-list__client-status-button bookings-list__client-status-button--approved">
+                                        <svg class="bookings-list__client-status-button-icon--approved bookings-list__client-status-button-icon--approved--check-mark-icon">
+                                            <use xlink:href="sprite.svg#check-mark-approved"></use>
+                                        </svg>
+                                        Approved
+                                        <svg class="bookings-list__client-status-button-icon--approved bookings-list__client-status-button-icon--approved--arrow-icon">
+                                            <use xlink:href="sprite.svg#arrow-down-approved"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="client-status__buttons">
+                                        <button class="client-status__buttons-button">
+                                            <svg class="client-status__buttons-button-icon">
+                                                <use xlink:href="sprite.svg#booking-list-edit"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="client-status__buttons-button">
+                                            <svg class="client-status__buttons-button-icon">
+                                                <use xlink:href="sprite.svg#booking-copy"></use>
+                                            </svg>
+                                        </button>
+                                        <button data-tab="6"
+                                                class="client-status__buttons-button client-status__buttons-button--arrow">
+                                            <svg class="client-status__buttons-button-icon">
+                                                <use xlink:href="sprite.svg#booking-arrow-down"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </td>
+                        </tr>
+                        <tr data-tab="6" class="bookings-list__client-tab bookings-list__client-tab--disabled">
+                            <td>Date: <b>8.08.2022</b></td>
+                            <td>Time: <b>9:00 am</b></td>
+                            <td>Pricing: <b>Stripe</b></td>
+                            <td colspan="3" class="bookings-list__client-tab-note">
+                                <span>
+                                    Note: <b>Lorem Ipsum is simply dummy text of the
+                                    printing and typesetting industry. Lorem
+                                    Ipsum has been the industry's standard dummy.</b>
+                                </span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="bookings-list__empty">
+                        <img src="/booking-empty-calendar.png" alt="Calendar" class="bookings-list__empty-img">
+                        <p class="bookings-list__empty-text">
+                            You don't have any bookings for this time period yet
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div >
+        <section class="bookings-list-wrapper-mobile">
+            <table class="booking-mobile booking-mobile--gray">
+                <tr>
+                    <td>
+                        <input class="custom-checkbox-input" type="checkbox" id="mobile-book-date1">
+                        <label class="custom-checkbox-label" for="mobile-book-date1"></label>
+                    </td>
+                    <td>
+                        <div class="booking-mobile__buttons">
+                            <button class="booking-mobile__buttons-button">
+                                <svg class="booking-mobile__buttons-button-icon">
+                                    <use xlink:href="sprite.svg#booking-list-edit"></use>
+                                </svg>
+                            </button>
+                            <button class="booking-mobile__buttons-button">
+                                <svg class="booking-mobile__buttons-button-icon">
+                                    <use xlink:href="sprite.svg#booking-copy"></use>
+                                </svg>
+                            </button>
+                            <button data-tab="1"
+                                    class="booking-mobile__buttons-button booking-mobile__buttons-button--arrow">
+                                <svg class="booking-mobile__buttons-button-icon">
+                                    <use xlink:href="sprite.svg#booking-arrow-down"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="booking-mobile__title">Date/Time:</td>
+                </tr>
+                <tr>
+                    <td>
+                        <time datetime="2022-08-01 09:30">August 1, 2022 9:30 am</time>
+                    </td>
+                    <td>
+                        <button class="button-approved">
+                            <svg class="button-approved__icon--checkmark">
+                                <use xlink:href="sprite.svg#check-mark-approved"></use>
+                            </svg>
+                            Approved
+                            <svg class="button-approved__icon--arrow">
+                                <use xlink:href="sprite.svg#arrow-down-approved"></use>
+                            </svg>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="booking-mobile__title">Customers</td>
+                </tr>
+                <tr>
+                    <td>Amina Amina</td>
+                </tr>
+                <tr>
+                    <td class="booking-mobile__title">Assigned to:</td>
+                </tr>
+                <tr>
+                    <td class="bookings-list__client-avatar">
+                        <div class="bookings-list__client-avatar-circle bookings-list__client-avatar-circle--violet">
+                            A
+                        </div>
+                        <span>Amina Amina</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="booking-mobile__title">Duration:</td>
+                    <td class="booking-mobile__title">Payment:</td>
+                </tr>
+                <tr>
+                    <td>1h</td>
+                    <td><abbr title="dollar">$</abbr>25.00</td>
+                </tr>
+            </table>
+            <table
+                    data-tab="1"
+                    class="bookings-list__client-tab bookings-list__client-tab--disabled"
+            >
+                <tbody>
+                <tr>
+                    <td>Date: <b>8.08.2022</b></td>
+                </tr>
+                <tr>
+                    <td>Time: <b>9:00 am</b></td>
+                </tr>
+                <tr>
+                    <td>Pricing: <b>Stripe</b></td>
+                </tr>
+                <tr>
+                    <td class="bookings-list__client-tab-note">
+                        <span>
+                            Note: <b>Lorem Ipsum is simply dummy text of the
+                            printing and typesetting industry. Lorem
+                            Ipsum has been the industry's standard dummy.</b>
+                        </span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <table class="booking-mobile">
+                <tr>
+                    <td>
+                        <input class="custom-checkbox-input" type="checkbox" id="mobile-book-date2">
+                        <label class="custom-checkbox-label" for="mobile-book-date2"></label>
+                    </td>
+                    <td>
+                        <div class="booking-mobile__buttons">
+                            <button class="booking-mobile__buttons-button">
+                                <svg class="booking-mobile__buttons-button-icon">
+                                    <use xlink:href="sprite.svg#booking-list-edit"></use>
+                                </svg>
+                            </button>
+                            <button class="booking-mobile__buttons-button">
+                                <svg class="booking-mobile__buttons-button-icon">
+                                    <use xlink:href="sprite.svg#booking-copy"></use>
+                                </svg>
+                            </button>
+                            <button data-tab="2"
+                                    class="booking-mobile__buttons-button booking-mobile__buttons-button--arrow">
+                                <svg class="booking-mobile__buttons-button-icon">
+                                    <use xlink:href="sprite.svg#booking-arrow-down"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="booking-mobile__title">Date/Time:</td>
+                </tr>
+                <tr>
+                    <td>
+                        <time datetime="2022-08-01 09:30">August 1, 2022 9:30 am</time>
+                    </td>
+                    <td>
+                        <button class="button-approved">
+                            <svg class="button-approved__icon--checkmark">
+                                <use xlink:href="sprite.svg#check-mark-approved"></use>
+                            </svg>
+                            Approved
+                            <svg class="button-approved__icon--arrow">
+                                <use xlink:href="sprite.svg#arrow-down-approved"></use>
+                            </svg>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="booking-mobile__title">Customers</td>
+                </tr>
+                <tr>
+                    <td>Amina Amina</td>
+                </tr>
+                <tr>
+                    <td class="booking-mobile__title">Assigned to:</td>
+                </tr>
+                <tr>
+                    <td class="bookings-list__client-avatar">
+                        <div class="bookings-list__client-avatar-circle bookings-list__client-avatar-circle--yellow">
+                            A
+                        </div>
+                        <span>Amina Amina</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="booking-mobile__title">Duration:</td>
+                    <td class="booking-mobile__title">Payment:</td>
+                </tr>
+                <tr>
+                    <td>1h</td>
+                    <td><abbr title="dollar">$</abbr>25.00</td>
+                </tr>
+            </table>
+            <table class="bookings-list__client-tab" data-tab="2">
+                <tbody>
+                <tr>
+                    <td>Date: <b>8.08.2022</b></td>
+                </tr>
+                <tr>
+                    <td>Time: <b>9:00 am</b></td>
+                </tr>
+                <tr>
+                    <td>Pricing: <b>Stripe</b></td>
+                </tr>
+                <tr>
+                    <td class="bookings-list__client-tab-note">
+                        <span>
+                            Note: <b>Lorem Ipsum is simply dummy text of the
+                            printing and typesetting industry. Lorem
+                            Ipsum has been the industry's standard dummy.</b>
+                        </span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <table class="booking-mobile">
+                <tr>
+                    <td>
+                        <input class="custom-checkbox-input" type="checkbox" id="mobile-book-date3">
+                        <label class="custom-checkbox-label" for="mobile-book-date3"></label>
+                    </td>
+                    <td>
+                        <div class="booking-mobile__buttons">
+                            <button class="booking-mobile__buttons-button">
+                                <svg class="booking-mobile__buttons-button-icon">
+                                    <use xlink:href="sprite.svg#booking-list-edit"></use>
+                                </svg>
+                            </button>
+                            <button class="booking-mobile__buttons-button">
+                                <svg class="booking-mobile__buttons-button-icon">
+                                    <use xlink:href="sprite.svg#booking-copy"></use>
+                                </svg>
+                            </button>
+                            <button data-tab="3"
+                                    class="booking-mobile__buttons-button booking-mobile__buttons-button--arrow">
+                                <svg class="booking-mobile__buttons-button-icon">
+                                    <use xlink:href="sprite.svg#booking-arrow-down"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="booking-mobile__title">Date/Time:</td>
+                </tr>
+                <tr>
+                    <td>
+                        <time datetime="2022-08-01 09:30">August 1, 2022 9:30 am</time>
+                    </td>
+                    <td>
+                        <button class="button-approved">
+                            <svg class="button-approved__icon--checkmark">
+                                <use xlink:href="sprite.svg#check-mark-approved"></use>
+                            </svg>
+                            Approved
+                            <svg class="button-approved__icon--arrow">
+                                <use xlink:href="sprite.svg#arrow-down-approved"></use>
+                            </svg>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="booking-mobile__title">Customers</td>
+                </tr>
+                <tr>
+                    <td>Amina Amina</td>
+                </tr>
+                <tr>
+                    <td class="booking-mobile__title">Assigned to:</td>
+                </tr>
+                <tr>
+                    <td class="bookings-list__client-avatar">
+                        <div class="bookings-list__client-avatar-circle bookings-list__client-avatar-circle--violet">
+                            A
+                        </div>
+                        <span>Amina Amina</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="booking-mobile__title">Duration:</td>
+                    <td class="booking-mobile__title">Payment:</td>
+                </tr>
+                <tr>
+                    <td>1h</td>
+                    <td><abbr title="dollar">$</abbr>25.00</td>
+                </tr>
+            </table>
+            <table class="bookings-list__client-tab" data-tab="3">
+                <tbody>
+                <tr>
+                    <td>Date: <b>8.08.2022</b></td>
+                </tr>
+                <tr>
+                    <td>Time: <b>9:00 am</b></td>
+                </tr>
+                <tr>
+                    <td>Pricing: <b>Stripe</b></td>
+                </tr>
+                <tr>
+                    <td class="bookings-list__client-tab-note">
+                        <span>
+                            Note: <b>Lorem Ipsum is simply dummy text of the
+                            printing and typesetting industry. Lorem
+                            Ipsum has been the industry's standard dummy.</b>
+                        </span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <table class="booking-mobile">
+                <tr>
+                    <td>
+                        <input class="custom-checkbox-input" type="checkbox" id="mobile-book-date4">
+                        <label class="custom-checkbox-label" for="mobile-book-date4"></label>
+                    </td>
+                    <td>
+                        <div class="booking-mobile__buttons">
+                            <button class="booking-mobile__buttons-button">
+                                <svg class="booking-mobile__buttons-button-icon">
+                                    <use xlink:href="sprite.svg#booking-list-edit"></use>
+                                </svg>
+                            </button>
+                            <button class="booking-mobile__buttons-button">
+                                <svg class="booking-mobile__buttons-button-icon">
+                                    <use xlink:href="sprite.svg#booking-copy"></use>
+                                </svg>
+                            </button>
+                            <button data-tab="4"
+                                    class="booking-mobile__buttons-button booking-mobile__buttons-button--arrow">
+                                <svg class="booking-mobile__buttons-button-icon">
+                                    <use xlink:href="sprite.svg#booking-arrow-down"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="booking-mobile__title">Date/Time:</td>
+                </tr>
+                <tr>
+                    <td>
+                        <time datetime="2022-08-01 09:30">August 1, 2022 9:30 am</time>
+                    </td>
+                    <td>
+                        <button class="button-approved">
+                            <svg class="button-approved__icon--checkmark">
+                                <use xlink:href="sprite.svg#check-mark-approved"></use>
+                            </svg>
+                            Approved
+                            <svg class="button-approved__icon--arrow">
+                                <use xlink:href="sprite.svg#arrow-down-approved"></use>
+                            </svg>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="booking-mobile__title">Customers</td>
+                </tr>
+                <tr>
+                    <td>Amina Amina</td>
+                </tr>
+                <tr>
+                    <td class="booking-mobile__title">Assigned to:</td>
+                </tr>
+                <tr>
+                    <td class="bookings-list__client-avatar">
+                        <div class="bookings-list__client-avatar-circle bookings-list__client-avatar-circle--green">
+                            A
+                        </div>
+                        <span>Amina Amina</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="booking-mobile__title">Duration:</td>
+                    <td class="booking-mobile__title">Payment:</td>
+                </tr>
+                <tr>
+                    <td>1h</td>
+                    <td><abbr title="dollar">$</abbr>25.00</td>
+                </tr>
+            </table>
+            <table class="bookings-list__client-tab" data-tab="4">
+                <tbody>
+                <tr>
+                    <td>Date: <b>8.08.2022</b></td>
+                </tr>
+                <tr>
+                    <td>Time: <b>9:00 am</b></td>
+                </tr>
+                <tr>
+                    <td>Pricing: <b>Stripe</b></td>
+                </tr>
+                <tr>
+                    <td class="bookings-list__client-tab-note">
+                        <span>
+                            Note: <b>Lorem Ipsum is simply dummy text of the
+                            printing and typesetting industry. Lorem
+                            Ipsum has been the industry's standard dummy.</b>
+                        </span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+        <div class="container">
+            <section class="graphic">
+
+                <div class="graphic__top">
+                    <h2 class="graphic__top-title title">
+                        Interests/Conversions
+                        <svg class="graphic__top-title-question">
+                            <use xlink:href="sprite.svg#question"></use>
+                        </svg>
+                    </h2>
+                    <div class="graphic__top-buttons">
+                        <button class="graphic__top-buttons-button graphic__top-buttons-button--active">Week</button>
+                        <button class="graphic__top-buttons-button">Days</button>
+                    </div>
+                </div>
+
+
+                <div class="graphic__graphic">
+                    <canvas style="position: relative; height: 40vh; width: 100vw" id="myChart"></canvas>
+                    <a class="graphic__graphic-button" href="#">
+                        <svg class="graphic__graphic-button-icon">
+                            <use xlink:href="sprite.svg#plus"></use>
+                        </svg>
+                    </a>
+                    <div class="graphic__graphic-empty">
+                        <img class="graphic__graphic-empty-img" src="/graphic-empty-gears.png" alt="Gears">
+                        <p class="graphic__graphic-empty-text">Your chart will be displayed here</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+
+<script type="module" src="main.js"></script>
+<script type="module">
+    import './js/dashboard.js'
+    import 'daterangepicker'
+    import 'chart.js'
+    import './js/data-picker-dashboard.js'
+    import './js/dashboard-chart.js'
+</script>
+</body>
+
+</html>

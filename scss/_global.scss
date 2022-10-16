@@ -1,0 +1,44 @@
+html,
+body {
+    height: 100%;
+    color: #212121;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.container {
+    max-width: 1670px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100% - 131px);
+    max-width: 1670px;
+    margin: 0 auto;
+    padding: 30px 15px 60px;
+}
+
+.main {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+
+.title {
+    font-size: 32px;
+    line-height: 48px;
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        min-height: calc(100% - 83px);
+        padding: 16px 16px 40px;
+    }
+}

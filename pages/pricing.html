@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+
+<body>
+
+<div class="container">
+    <header class="header">
+        <div class="header__left mobile-hidden">
+            <a class="logo" href="#">
+                <img class="logo__image" src="/logo.png" alt="logo">
+            </a>
+            <h1 class="header__title title">Dashboard</h1>
+        </div>
+        <div class="header__left mobile-visible">
+            <a class="logo" href="#">
+                <img class="logo__image" src="/logo-mobile.png" alt="logo">
+            </a>
+            <h1 class="header__title title">Pricing</h1>
+        </div>
+        <div class="header__right">
+            <nav class="nav mobile-hidden">
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a href="#" class="menu__link menu__link--active">
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            Services
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            Appearnce
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            Settings
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <a class="header__button button" href="#">
+                Change plan
+                <svg class="header__button-icon">
+                    <use xlink:href="../sprite.svg#plus"></use>
+                </svg>
+            </a>
+
+        </div>
+    </header>
+</div>
+
+<div class="wrapper">
+    <main class="main">
+        <section class="info-warning">
+            <svg class="info-warning__icon">
+                <use xlink:href="../sprite.svg#warning-protection"></use>
+            </svg>
+            <div class="info-warning__text">
+                <h2 class="info-warning__title title">30-Day Money Back Guarantee</h2>
+                <p class="info-warning__subtitle mobile-hidden">
+                    You are fully protected by our 100% Money Back Guarantee. If during the next 30 days you experience
+                    an issue that makes the plugin unusable
+                    <br>
+                    and we are unable to resolve it, we'll happily consider offering a full refund of your money.
+                    <a href="#" class="info-warning__text-link">Learn more...</a>
+                </p>
+                <p class="info-warning__subtitle mobile-visible">
+                    You are fully protected by our 100% Money Back Guarantee.
+                    <a href="#" class="info-warning__text-link">Learn more...</a>
+                </p>
+            </div>
+        </section>
+        <section class="plans">
+            <h2 class="plans__title title">Choose your plan and upgrade in minutes!</h2>
+            <p class="plans__subtitle">Save up to 51% on Yearly Pricing!</p>
+            <div class="plans__buttons">
+                <button class="plans__buttons-button">Monthly</button>
+                <button class="plans__buttons-button plans__buttons-button--active">Annually (up to 51% off)</button>
+                <button class="plans__buttons-button">Lifetime</button>
+            </div>
+            <div class="plans-list">
+                <div class="plan plan--active">
+                    <div class="plan-inner">
+                        <h3 class="plan__title">FREE</h3>
+                        <div class="plan__points">
+                            <span class="plan__points-point">No payment</span>
+                            <span class="plan__points-point">
+                                Single Site
+                                <svg class="plan__points-point-icon">
+                                    <use xlink:href="../sprite.svg#question"></use>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="plan__price">$0</div>
+                        <div class="plan__features">
+                            <div class="plan__features-feature">
+                                <svg class="plan__features-feature-icon">
+                                    <use xlink:href="../sprite.svg#check-mark"></use>
+                                </svg>
+                                No Support
+                            </div>
+                            <div class="plan__features-feature">
+                                <svg class="plan__features-feature-icon">
+                                    <use xlink:href="../sprite.svg#check-mark"></use>
+                                </svg>
+                                No Integrations
+                            </div>
+                        </div>
+                        <a href="#" class="plan__button">DOWNGRADE PLAN</a>
+                    </div>
+                </div>
+                <div class="plan">
+                    <div class="plan-inner">
+                        <h3 class="plan__title">PROFESSIONAL</h3>
+                        <span class="plan__filter">Most Popular</span>
+                        <div class="plan__points">
+                            <span class="plan__points-point">Billed Annually</span>
+                            <span class="plan__points-point">
+                                Single Site
+                                <svg class="plan__points-point-icon">
+                                    <use xlink:href="../sprite.svg#question"></use>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="plan__price">
+                            $7.42
+                            <span>/month</span>
+                        </div>
+                        <div class="plan__features">
+                            <div class="plan__features-feature">
+                                <svg class="plan__features-feature-icon">
+                                    <use xlink:href="../sprite.svg#check-mark"></use>
+                                </svg>
+                                Support of Google calendar, WooComerce, PayPal, Stripe, Coupons
+                            </div>
+                            <div class="plan__features-feature">
+                                <svg class="plan__features-feature-icon">
+                                    <use xlink:href="../sprite.svg#check-mark"></use>
+                                </svg>
+                                Priority Email Support
+                            </div>
+                        </div>
+                        <div class="plan__options">
+                            <div class="plan__options-option">
+                                <input
+                                        checked
+                                        type="radio"
+                                        id="radio1"
+                                        name="contact"
+                                        class="plan__options-option-checkbox"
+                                >
+                                <label class="plan__options-option-label" for="radio1">Single Site</label>
+                                <span class="plan__options-option-price">$7.42/mo</span>
+                            </div>
+                            <div class="plan__options-option plan__options-option--discount">
+                                <input
+                                        type="radio"
+                                        id="radio2"
+                                        name="contact"
+                                        class="plan__options-option-checkbox"
+                                >
+                                <label class="plan__options-option-label" for="radio2">3 Sites</label>
+                                <span class="plan__options-option-discount">Save 12%</span>
+                                <span class="plan__options-option-price">$16.58/mo</span>
+                            </div>
+                            <div class="plan__options-option plan__options-option--discount">
+                                <input
+                                        type="radio"
+                                        id="radio3"
+                                        name="contact"
+                                        class="plan__options-option-checkbox"
+                                >
+                                <label class="plan__options-option-label" for="radio3">3 Sites</label>
+                                <span class="plan__options-option-discount">Save 12%</span>
+                                <span class="plan__options-option-price">$24.08/mo</span>
+                            </div>
+                        </div>
+                        <a href="#" class="plan__button">DOWNGRADE PLAN</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="faq">
+            <h2 class="faq__title title">Frequently Asked Questions</h2>
+            <div class="faq__tabs">
+                <div class="faq__tab faq__tab--active">
+                    <h3 class="faq__tab-title title">Is there a setup fee?</h3>
+                    <svg class="faq__tab-icon">
+                        <use xlink:href="../sprite.svg#arrow-up"></use>
+                    </svg>
+                    <p class="faq__tab-text">No. There are no setup fees on any of our plans.</p>
+                </div>
+                <div class="faq__tab">
+                    <h3 class="faq__tab-title title">What payment methods are accepted?</h3>
+                    <svg class="faq__tab-icon">
+                        <use xlink:href="../sprite.svg#arrow-up"></use>
+                    </svg>
+                    <p class="faq__tab-text">No. There are no setup fees on any of our plans.</p>
+                </div>
+                <div class="faq__tab">
+                    <h3 class="faq__tab-title title">Can I cancel my account at any time?</h3>
+                    <svg class="faq__tab-icon">
+                        <use xlink:href="../sprite.svg#arrow-up"></use>
+                    </svg>
+                    <p class="faq__tab-text">No. There are no setup fees on any of our plans.</p>
+                </div>
+                <div class="faq__tab">
+                    <h3 class="faq__tab-title title">Do you offer refunds?</h3>
+                    <svg class="faq__tab-icon">
+                        <use xlink:href="../sprite.svg#arrow-up"></use>
+                    </svg>
+                    <p class="faq__tab-text">No. There are no setup fees on any of our plans.</p>
+                </div>
+                <div class="faq__tab">
+                    <h3 class="faq__tab-title title">What's the time span for your contracts?</h3>
+                    <svg class="faq__tab-icon">
+                        <use xlink:href="../sprite.svg#arrow-up"></use>
+                    </svg>
+                    <p class="faq__tab-text">No. There are no setup fees on any of our plans.</p>
+                </div>
+                <div class="faq__tab">
+                    <h3 class="faq__tab-title title">Do I get updates for the premium plugin?</h3>
+                    <svg class="faq__tab-icon">
+                        <use xlink:href="../sprite.svg#arrow-up"></use>
+                    </svg>
+                    <p class="faq__tab-text">No. There are no setup fees on any of our plans.</p>
+                </div>
+                <div class="faq__tab">
+                    <h3 class="faq__tab-title title">Do you offer any discounted plans?</h3>
+                    <svg class="faq__tab-icon">
+                        <use xlink:href="../sprite.svg#arrow-up"></use>
+                    </svg>
+                    <p class="faq__tab-text">No. There are no setup fees on any of our plans.</p>
+                </div>
+                <div class="faq__tab">
+                    <h3 class="faq__tab-title title">Do you offer support if I need help?</h3>
+                    <svg class="faq__tab-icon">
+                        <use xlink:href="../sprite.svg#arrow-up"></use>
+                    </svg>
+                    <p class="faq__tab-text">No. There are no setup fees on any of our plans.</p>
+                </div>
+                <div class="faq__tab">
+                    <h3 class="faq__tab-title title">Can I change my plan later on?</h3>
+                    <svg class="faq__tab-icon">
+                        <use xlink:href="../sprite.svg#arrow-up"></use>
+                    </svg>
+                    <p class="faq__tab-text">No. There are no setup fees on any of our plans.</p>
+                </div>
+                <div class="faq__tab">
+                    <h3 class="faq__tab-title title">I have other pre-sale questions, can you help?</h3>
+                    <svg class="faq__tab-icon">
+                        <use xlink:href="../sprite.svg#arrow-up"></use>
+                    </svg>
+                    <p class="faq__tab-text">I have other pre-sale questions, can you help?</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+
+<script type="module" src="../main.js"></script>
+<script type="module">
+    import '../js/pricing.js'
+</script>
+</body>
+
+</html>

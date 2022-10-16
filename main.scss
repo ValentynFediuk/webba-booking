@@ -1,0 +1,21 @@
+@import 'scss/global';
+@import 'scss/mixins';
+@import 'scss/reset';
+@import 'scss/fonts';
+
+@import 'scss/components/header';
+
+.mobile-visible {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+  .mobile-visible {
+    display: block;
+  }
+
+  .mobile-hidden {
+    display: none;
+  }
+}

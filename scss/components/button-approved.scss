@@ -1,0 +1,17 @@
+.button-approved {
+    color: #0EB500;
+    background: rgba(125, 198, 119, 0.2);
+    border-radius: 8px;
+    padding: 4px 10px;
+    @include flex-between;
+    &__icon--checkmark {
+        margin-right: 6px;
+        width: 14px;
+        height: 14px;
+    }
+    &__icon--arrow {
+        margin-left: 6px;
+        width: 10px;
+        height: 10px;
+    }
+}
